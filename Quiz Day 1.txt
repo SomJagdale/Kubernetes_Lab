@@ -1,0 +1,112 @@
+1. What is the basic operational unit of Kubernetes?
+Task
+Pod
+Nodes
+Container
+
+2. Which of the following runs on each node and ensures containers are running in a pod?
+Pod
+Etcd
+Kubelet
+Scheduler
+
+3. Which of the following things are managed by a container orchestration platform?
+adding/removing containers
+re-scheduling failed containers
+Fixing a crashed container by itself
+Both A & B
+
+4. What is the function of a worker node?
+To communicate with hosts on a network
+To run pods according to master components
+To channel incoming data from multiple input ports to a specific port
+none of the above
+
+7. The Kubernetes Network proxy runs on which node?
+Master Node
+All the nodes
+Worker Node
+None of the above
+
+8. What is a pod in Kubernetes and what does it do?
+A collection of physical IT components that supports a group of containers
+A collection of logic circuitry that evaluates a computer's operational code
+Where you find peas
+One or more containers grouped together to share resources and run as a unit
+
+9. Kubernetes allows you to manage container clusters in multiple cloud providers.
+False
+May Be
+True
+none of the above
+
+10. Which of the following is not suited for Monolithic Architecture?
+Distributed System
+Standalone application
+
+
+11. Which one is not part of Kubernetes architecture?
+Control plane
+Management plane
+Data plane
+none of the above
+
+
+12. Which of the component assigns new workload to worker node?
+ube-schedular
+kube-controller-manager
+kube-etdc
+All of above
+
+
+13. Which of the following are NOT a Container Orchestrators?
+Vault
+Docker Swarm
+Kubernetes
+All of above
+
+14. What is a worker node responsible for?
+Running tasks designated by Kubernetes
+A pod equivalent
+A Kubernetes working machine
+A pod manager
+
+15. Which of the following runs on each node and ensures containers are running in a pod?
+ Pod
+ Etcd
+ Kubelet
+ Scheduler
+ 
+ 
+16.  Replication Controllers and Deployment Controllers are part of ................
+ Kubeadm
+ Etcd manager
+ API Controller Manager
+ Master Controller Manager
+ 
+ 
+17. What is Kubernetes?
+ Portable platform
+ Extensible platform
+ Open-source platform
+
+
+18. In kubernetes a node is ................
+ A worker machine
+ A tool for starting a kubernetes cluster on a local machine
+ developing tool
+ None of above
+ 
+19. Kubernetes is written in which language?
+ Go
+ C++
+ Python
+ Java spring framework
+ 
+20. which of the following process runs on kubernetes non-master node?
+ Kube-proxy
+ Kube-apiserver
+ Both Kube-proxy & Kube-apiserver
+ None of above
+ 
+ 
