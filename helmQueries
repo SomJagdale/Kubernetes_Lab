@@ -1,0 +1,17 @@
+1. If NTR tranform in to stateless application does this helm script works?
+2. How and where we can set these screts? imagePullSecrets: A list for specifying Kubernetes secrets that allow pulling private Docker images.?
+3. What about log when it restart automatically ? - restartPolicy: Set to "Always," meaning that pods will be restarted automatically if they are terminated for any reason
+4. What is purpose of this values? splitServices: Boolean flag set to true, indicating that services should be split, likely for separating internal and external service configurations.
+5. Is this right? usetcpdump: Boolean flag set to true, indicating that TCP dump (packet capture) should be enabled for debugging or monitoring purposes.
+6. Where this resides ? logclear: Configurations for log management:
+7. User of podAnnotations:
+8. How below configuration different than the port number specified in the tr.cfg
+  service:
+  type: ClusterIP
+  ports:
+    - name: tcp-ntr  {purpose of this port?}
+      port: 13003
+    - name: ota-publish
+      port: 7001
+
+  9. 
