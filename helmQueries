@@ -14,4 +14,11 @@
     - name: ota-publish
       port: 7001
 
-  9. 
+  9. If I started one TCP server port in NTR application via tr.cfg, should we include that in service.yaml file
+10. What are changes we have to if in the future we have to support NTR for DSI oid where communcation need to happen on DSI GCT middleware?
+11. What if we need to add the support for NTR rescan, where NTR will be opening port ?
+12. Persistent Volumes?
+13 - Secrets Management?
+14. Rollback Plan?
+15. Implement Monitoring and Logging?
+
