@@ -1,5 +1,7 @@
 # Kubernetes_Learning
 
+kubeconfig file is used by both kubectl and Helm to interact with Kubernetes clusters
+
 kubectl cluster-info
 
 ~/.kube/config
