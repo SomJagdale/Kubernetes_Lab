@@ -1,2 +1,91 @@
+Helm is developed in the Go programming language. Helm is a package manager for Kubernetes, and it was built using
+Go to leverage its strong concurrency model, efficient memory management, and static typing, which are well-suited f
+or building cloud-native tools.
+
+Helm uses the Go templating engine for rendering Kubernetes resource files, making it a natural fit for the Kubernetes 
+ecosystem, which is also largely written in Go. This choice of language allows Helm to be performant, reliable, and
+maintainable, aligning well with Kubernetes' architecture and design principles.
+
 create helm chart 
 $ helm create my_chart
+Go template rendering engine
+
+dry running - post rendering helm chart by go template engine
+simulate the installation of a Helm chart and provide detailed output without actually deploying anything to the Kubernetes cluster.
+$ helm install mychart --dry-run --debug ./mychart
+
+Get the rendered output for the helm to know what is final values in all the objects of k8s
+helm template mychart ./mychart > final.yaml
+
+1. Basic Helm Commands###################
+helm install <release-name> <chart-path>
+helm install myrelease ./mychart
+
+If your application uses a custom values file (such as myapp_values.yaml) instead of the default values.yaml,
+helm install myrelease ./mychart -f myapp_values.yaml
+OR
+helm install myrelease ./mychart --values myapp_values.yaml
+
+helm uninstall <release-name>: Uninstalls a release from the Kubernetes cluster
+
+helm list: Lists all the Helm releases in the Kubernetes cluster. By default, it shows releases in the current namespace.
+
+helm repo add <repo-name> <repo-url>: Adds a new Helm chart repository by specifying a name and a URL.
+
+helm repo update
+
+helm search repo nginx
+
+helm get all <release-name>: Fetches all the information about a deployed release, including the Kubernetes resources it has created.
+
+helm template <chart-path>: Renders the templates in a Helm chart to plain Kubernetes YAML manifests, without installing anything. This command is useful for debugging and validating charts.
+
+2. Helm Chart and Release Management#########################
+
+helm show chart <chart-path>: Displays detailed information about a chart, such as the version, description, and maintainers.
+
+helm show values <chart-path>: Displays the default values of a chart, which can be overridden during installation.
+
+helm rollback <release-name> <revision>: Rolls back a release to a previous revision. This command can be used to undo changes made by a faulty upgrade.
+
+3. Helm Debugging and Dry-Run ######################################
+
+helm install <release-name> <chart-path> --dry-run --debug: Simulates an installation of a chart, providing detailed output for debugging purposes without actually deploying anything.
+
+helm test <release-name>: Runs the tests defined in a Helm chart for a given release. This is used to validate that the release has been installed correctly and is working as expected.
+
+helm lint <chart-path>: Examines a chart for possible issues and errors. This is useful for validating charts before deploying them.
+
+4. Helm Packaging and Repository Management######################################
+
+helm package <chart-path>: Packages a Helm chart into a .tgz archive that can be easily shared or uploaded to a chart repository.
+
+Other commands in brief 
+Available Commands:
+  completion  generate autocompletion scripts for the specified shell
+  create      create a new chart with the given name
+  dependency  manage a chart's dependencies
+  env         helm client environment information
+  get         download extended information of a named release
+  help        Help about any command
+  history     fetch release history
+  install     install a chart
+  lint        examine a chart for possible issues
+  list        list releases
+  package     package a chart directory into a chart archive
+  plugin      install, list, or uninstall Helm plugins
+  pull        download a chart from a repository and (optionally) unpack it in local directory
+  push        push a chart to remote
+  registry    login to or logout from a registry
+  repo        add, list, remove, update, and index chart repositories
+  rollback    roll back a release to a previous revision
+  search      search for a keyword in charts
+  show        show information of a chart
+  status      display the status of the named release
+  template    locally render templates
+  test        run tests for a release
+  uninstall   uninstall a release
+  upgrade     upgrade a release
+  verify      verify that a chart at the given path has been signed and is valid
+  version     print the client version information
+
