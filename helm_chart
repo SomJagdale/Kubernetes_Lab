@@ -89,3 +89,49 @@ Available Commands:
   verify      verify that a chart at the given path has been signed and is valid
   version     print the client version information
 
+Other importent flags and options
+--kube-apiserver string
+Purpose: Specifies the address and port of the Kubernetes API server.
+Usage: Useful when connecting to a Kubernetes API server that is not specified in the default kubeconfig file.
+
+--kube-as-user string
+Purpose: Specifies a user to impersonate for the Helm operation.
+
+--kube-ca-file string
+Purpose: Provides the path to a certificate authority (CA) file for establishing a secure connection to the Kubernetes API server.
+Usage: Ensures secure communication by validating the Kubernetes API server’s certificate.
+
+--kube-context string
+Purpose: Specifies the name of the Kubernetes context to use from the kubeconfig file.
+Usage: Allows selecting a specific context (cluster, user, and namespace) to interact with, instead of using the current context.
+
+--kube-insecure-skip-tls-verify
+Purpose: If set to true, the Kubernetes API server’s certificate is not validated.
+Usage: Can be used to bypass certificate validation for HTTPS connections, making the connection insecure. Typically used in development or testing environments.
+
+
+--kube-tls-server-name string
+Purpose: Specifies the server name for Kubernetes API server certificate validation.
+Usage: Used to provide a custom server name for verifying the Kubernetes API server’s TLS certificate, which can be different from the actual hostname.
+
+--kube-token string
+Purpose: Specifies a bearer token for authentication with the Kubernetes API server.
+Usage: Used for authenticating requests to the Kubernetes API server, often in automation scripts or CI/CD pipelines.
+
+--kubeconfig string
+Purpose: Specifies the path to the kubeconfig file.
+Usage: Allows using a specific kubeconfig file other than the default ~/.kube/config, useful for accessing different clusters or using different credentials.
+
+-n, --namespace string
+Purpose: Specifies the Kubernetes namespace scope for the Helm request.
+Usage: Sets the namespace where the Helm command should operate. If not specified, the default namespace is used.
+
+registry-config string
+Purpose: Specifies the path to the registry configuration file.
+Default: "/home/somanath/.config/helm/registry/config.json".
+Usage: Configures the Docker registry settings for pulling Helm chart dependencies.
+
+--repository-config string
+Purpose: Specifies the path to the file containing Helm repository names and URLs.
+Default: "/home/somanath/.config/helm/repositories.yaml".
+Usage: Points Helm to the file containing configured repository information, such as names and URLs for downloading charts.
