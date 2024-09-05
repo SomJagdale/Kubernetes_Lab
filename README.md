@@ -1,5 +1,5 @@
 # Kubernetes_Learning
-
+kind: Secret and kind: Opaque
 kubeconfig file is used by both kubectl and Helm to interact with Kubernetes clusters
 
 kubectl cluster-info
